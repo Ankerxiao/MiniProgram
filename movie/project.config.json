@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
 	"appid": "wx1929fe8f45c7573f",
-	"projectname": "20190409",
+	"projectname": "movie",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
