@@ -8,7 +8,8 @@ Page({
     disabled: true,
     btnstate: "default",
     account: "",
-    password: ""
+    password: "",
+    abcde: ""
   },
 
   accountInput: function (e) {
@@ -16,21 +17,48 @@ Page({
     console.log(content);
     if (content != '') {
       this.setData({
-        disabled: false,
-        btnstate: "primary",
         account: content
       });
+    }
+    if (this.data.password != '' && content != '') {
+      this.setData({
+        disabled: false,
+        btnstate: "primary",
+      });
+    } else {
       this.setData({
         disabled: true,
         btnstate: "default"
-      })
+      });
+    }
+  },
+
+  pwdInput: function (e) {
+    var content = e.detail.value;
+    if (content != '') {
+      this.setData({
+        password: content
+      });
+    }
+    if (this.data.account != '' && content != '') {
+      this.setData({
+        disabled: false,
+        btnstate: "primary"
+      });
+    } else {
+      this.setData({
+        disabled: true,
+        btnstate: "default"
+      });
     }
   },
 
   pwdBlur: function (e) {
     var password = e.detail.value;
-    if (password != '') {
+    if (password != '' && this.data.account != '') {
       this.setData({
+        disabled: false,
+        btnstate: "primary",
         password: password
       });
     }

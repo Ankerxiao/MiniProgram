@@ -12,7 +12,7 @@
   <view class='account'>
     <view class='title'>密码</view>
     <view class='num'>
-      <input bindinput='pwdBlur' placeholder='请输入密码' password placeholder-style='color:#999999;' />
+      <input bindinput='pwdInput' placeholder='请输入密码' password placeholder-style='color:#999999;' />
     </view>
     <view class='see'>
       <image src='/images/see.jpg' style='width:42px;height:30px;'></image>
