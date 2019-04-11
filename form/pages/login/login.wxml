@@ -25,7 +25,7 @@
   <view class='operate'>
     <view><navigator url='../mobile/mobile'>手机号快速注册</navigator></view>
     <view><navigator url='../company/company'>企业用户注册</navigator></view>
-    <view>找回密码</view>
+    <view bindtap='findPwd'>找回密码</view>
   </view>
   <view class='login'>
     <view>

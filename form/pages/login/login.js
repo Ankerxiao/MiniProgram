@@ -64,11 +64,44 @@ Page({
     }
   },
 
+  findPwd: function (e) {
+    wx.request({
+      url: 'https://m.maoyan.com/movie/list.json',
+      data: {
+        type: "movies",
+        offset: 0,
+        limit: 10
+      },
+      method: "GET",
+      header: {
+        "content-type": "application/json"
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getLocation({
+      type: "wgs84",
+      success: function(res) {
+        var latitude = res.latitude;
+        var longitude = res.longitude;
+        var speed = res.speed;
+        var accuracy = res.accuracy;
+        console.log(latitude, longitude, speed, accuracy);
+      },
+    });
+    
+    wx.chooseLocation({
+      success: function(res) {
+        consolo.log(res);
+      },
+    })
   },
 
   /**
