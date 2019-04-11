@@ -1,2 +1,59 @@
 <!--pages/train/train.wxml-->
-<text>pages/train/train.wxml</text>
+<view class='haibao'>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' style='height:80px;'>
+    <block wx:for="{{imgUrls}}" wx:key="item">
+      <swiper-item>
+        <image src='{{item}}' style='width:100%;height:80px;'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='content'>
+  <view class='navbg'>
+    <view id='0' class="{{currentTab==0?'select':'normal'}}" bindtap='switchNav'>火车票</view>
+    <view id='1' class="{{currentTab==1?'select':'normal'}}" bindtap='switchNav'>汽车票</view>
+  </view>
+
+  <view class='formbg'>
+    <form bindsubmit='formSubmit'>
+      <view class='station'>
+        <view>
+          <input name="startStation" type='address' value='哈尔滨'></input>
+        </view>
+        <view>
+          <image src='../../images/icon/hcp/xz.jpg' style='width:44px;height:45px;'></image>
+        </view>
+        <view>
+          <input name="endStation" value="北京"></input>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='station'>
+        <view>
+          <!-- <input name="date" value="4月11日"></input> -->
+          <picker mode="date" value='{{currentDate}}' start="{{dateNow}}" end="2020-02-03" bindChange="bindDateChange">
+            <text>
+            {{currentDate}}
+            </text>
+          </picker>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='type'>
+        <view>高铁动车
+          <switch name="gt" type='switch'></switch>
+        </view>
+        <view>学生票
+          <switch name="xs" type='switch'></switch>
+        </view>
+      </view>
+      <button class='btn' form-type='submit'>查询</button>
+      <view class='record'>
+        <text>北京→佳木斯</text>
+        <text>佳木斯→北京</text>
+        <text>清楚历史</text>
+      </view>
+    </form>
+  </view>
+</view>

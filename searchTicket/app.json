@@ -9,7 +9,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5495e6",
     "navigationBarTitleText": "晓12306",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee"
   },
   "tabBar": {
     "list": [
