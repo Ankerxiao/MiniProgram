@@ -5,14 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
+    currentTab: 0,
+    winWidth: 0,
+    winHeight: 0,
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    imgUrls: [
+      "/images/haibao/1.jpg",
+      "/images/haibao/2.jpg",
+      "/images/haibao/3.jpg",
+      "/images/haibao/4.jpg"
+    ]
+  },
 
+  switchNav: function (e) {
+    var id = e.currentTarget.id;
+    this.setData({
+      currentTab: id
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var page = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log(res);
+        page.setData({
+          winHeight: res.windowWidth
+        });
+        page.setData({
+          winHeight: res.windowHeight
+        });
+      },
+    })
   },
 
   /**
