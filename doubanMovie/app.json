@@ -11,5 +11,6 @@
     "navigationBarTitleText": "豆瓣电影",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "debug": true
 }
