@@ -31,12 +31,9 @@
       <view class='hr'></view>
       <view class='station'>
         <view>
-          <!-- <input name="date" value="4月11日"></input> -->
-          <picker mode="date" value='{{currentDate}}' start="{{dateNow}}" end="2020-02-03" bindChange="bindDateChange">
-            <text>
-            {{currentDate}}
-            </text>
-          </picker>
+            <picker mode="date" value='{{currentDate}}' start="{{dateNow}}" end="2020-02-03" bindchange="bindDateChange">
+              <view>{{currentDate}}</view>
+            </picker>
         </view>
       </view>
       <view class='hr'></view>
