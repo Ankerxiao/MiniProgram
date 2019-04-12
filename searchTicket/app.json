@@ -3,7 +3,8 @@
     "pages/train/train",
     "pages/airplane/airplane",
     "pages/bus/bus",
-    "pages/mycenter/mycenter"
+    "pages/mycenter/mycenter",
+    "pages/trainList/trainList"
   ],
   "window": {
     "backgroundTextStyle": "light",

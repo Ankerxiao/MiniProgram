@@ -39,6 +39,16 @@ Page({
     })
   },
 
+  //表单提交事件
+  formSubmit: function (e) {
+    var startStation = e.detail.value.startStation;
+    var endStation = e.detail.value.endStation;
+    var date = this.data.currentDate;
+    wx.navigateTo({
+      url: '../trainList/trainList?startStation=' + startStation + "&endStation=" + endStation + "&date=" + date,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,41 @@
+<!--pages/trainList/trainList.wxml-->
+<view class='date'>
+  <view>昨天</view>
+  <view>{{date}}</view>
+  <view>明天</view>
+</view>
+
+<view class='content' style='height:{{winHeight}}px'>
+  <block wx:for="{{trainList}}">
+    <view class='bg'>
+      <view class='item'>
+        <view class='wrApper left'>
+          <view class='normal'>{{item.station}}</view>
+          <view class='blue'>{{item.endstation}}</view>
+        </view>
+        <view class='wrApper center'>
+          <view class='normal'>{{item.trainno}}</view>
+          <view class='line'></view>
+          <view class='small'>{{item.costtime}}</view>
+        </view>
+        <view class='wrApper right'>
+          <view class='normal'>{{item.departuretime}}</view>
+          <view class='normal'>{{item.arrivaltime}}</view>
+        </view>
+        <view class='wrApper right'>
+          <view class='blue'>{{item.priceed}}起</view>
+          <view class='buy'>可抢票</view>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='seat'>
+        <view class='yes'>一等座:10张
+          <text>(抢)</text>
+        </view>
+        <view class='no'>二等座:0张
+          <text>(抢)</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
