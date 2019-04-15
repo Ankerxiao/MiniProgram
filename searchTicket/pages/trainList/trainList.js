@@ -28,6 +28,9 @@ Page({
   },
 
   loadTrainList: function(start, end) {
+    wx.showLoading({
+      title: '正在加载中',
+    });
     var page = this;
     wx.request({
       url: "https://api.jisuapi.com/train/station2s?appkey=22b3e0c55767a701&start="+ start + "&end=" + end + "&ishigh=0&date=" + this.data.date,
@@ -38,6 +41,7 @@ Page({
         "date": this.data.date
       },
       success: function (res) {
+        wx.hideLoading();
         var trainList = res.data.result.list;
         var size = trainList.length;
         var winHeight = size *100 + 30;
