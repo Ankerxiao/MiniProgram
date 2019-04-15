@@ -1,0 +1,40 @@
+/* pages/flexlayout/flexlayout.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  /* align-items: baseline; */
+  background-color: rgb(240, 240, 240);
+  height: 300px;
+  
+}
+
+.one {
+  text-align: center;
+  line-height: 80px;
+  background-color: red;
+  color: white;
+  width: 30%;
+  height: 80px;
+}
+
+.two {
+  text-align: center;
+  line-height: 160px;
+  background-color: green;
+  color: white;
+  width: 30%;
+  height: 160px;
+}
+
+.three {
+  text-align: center;
+  line-height: 240px;
+  background-color: blue;
+  color: white;
+  width: 30%;
+  height: 240px;
+}
+
