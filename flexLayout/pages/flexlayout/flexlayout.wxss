@@ -2,39 +2,101 @@
 
 .container {
   display: flex;
+  /*
+  通过设置坐标轴，来设置项目的排列方向
+  row(默认值),row-reverse,column,column-reverse
+  */
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  justify-content: space-evenly;
-  /* align-items: baseline; */
-  background-color: rgb(240, 240, 240);
-  height: 300px;
-  
+
+  /*
+  设置是否允许项目多行排列，以及多行排列时换行的方向
+  nowrap(默认值),wrap,wrap-reverse
+  */
+  flex-wrap: wrap;
+
+  /*
+  设置项目在主轴方向上对齐方式，以及分配项目之间及其周围多余的空间
+  flex-start（默认值） | flex-end | center | space-between | space-around| space-evenly
+  */
+  justify-content: space-around;
+
+  /*
+  设置项目在行中的对齐方式
+  stretch（默认值） | flex-start | center | flex-end | baseline
+  */
+  align-items: center;
+
+  margin-top: 10px;
+  background-color: rgb(220, 220, 220);
+  height: 100px;
 }
 
 .one {
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   background-color: red;
   color: white;
-  width: 30%;
-  height: 80px;
+  width: 20%;
+  height: 60px;
+  order: 2;
 }
 
 .two {
   text-align: center;
-  line-height: 160px;
+  line-height: 60px;
   background-color: green;
   color: white;
-  width: 30%;
-  height: 160px;
+  width: 20%;
+  height: 100px;
+  order: 1;
 }
 
 .three {
   text-align: center;
-  line-height: 240px;
+  line-height: 60px;
   background-color: blue;
   color: white;
-  width: 30%;
-  height: 240px;
+  width: 20%;
+  height: 140px;
+  order: 3;
 }
 
+.containerTwo {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  background-color: rgb(200, 200, 200);
+  height: 100px;
+}
+
+.fouth {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  background-color: purple;
+}
+
+.fifth {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  background-color: mediumslateblue;
+
+  
+}
+
+.sixth {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  background-color: brown;
+}
