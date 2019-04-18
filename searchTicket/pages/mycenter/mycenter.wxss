@@ -1,1 +1,9 @@
 /* pages/mycenter/mycenter.wxss */
+
+.amountBg {
+  height: 100px;
+  background-color: #5495e6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

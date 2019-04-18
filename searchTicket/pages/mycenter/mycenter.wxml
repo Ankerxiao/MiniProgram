@@ -1,2 +1,12 @@
 <!--pages/mycenter/mycenter.wxml-->
-<text>pages/mycenter/mycenter.wxml</text>
+<view class='amountBg'>
+  <view class='img'>
+    <image src='../../images/icon/grzx/tx.jpg' style='width:49px;height:47px;'></image>
+  </view>
+  <view class='account'>
+    <view>{{userInfo.nickName}}</view>
+    <view>账号管理</view>
+    <view>{{fixedData | parseInt}}</view>
+  </view>
+  <view class='nav'></view>
+</view>
